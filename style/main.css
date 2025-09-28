@@ -5,6 +5,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  background-color: #ffb6c1; /* Default pink background */
 }
 
 .song {
@@ -28,6 +29,18 @@ body {
   top: 20vh;
 }
 
+/* Background untuk section pink */
+body.pink-bg {
+  background-color: #ffb6c1;
+  transition: background-color 0.5s ease;
+}
+
+/* Background untuk section putih */
+body.white-bg {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease;
+}
+
 .one {
   font-size: 4.5rem;
 }
@@ -48,6 +61,7 @@ body {
   padding: 10px;
   position: relative;
   width: 600px;
+  background-color: #ffffff;
 }
 
 .text-box p {
@@ -93,7 +107,6 @@ body {
 .idea-6 span{
   font-size: 15rem;
 }
-
 
 .six {
   position: relative;
