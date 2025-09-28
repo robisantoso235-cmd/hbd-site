@@ -22,6 +22,9 @@ window.addEventListener('load', () => {
 
 // animation timeline
 const animationTimeline = () => {
+    // Set initial background to pink
+    document.body.className = 'pink-bg';
+    
     // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -177,6 +180,10 @@ const animationTimeline = () => {
         0.2,
         "+=1.5"
     )
+    // Change background to white when section 6 starts
+    .call(() => {
+        document.body.className = 'white-bg';
+    })
     .staggerFromTo(
         ".baloons img",
         2.5, {
@@ -268,6 +275,8 @@ const animationTimeline = () => {
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");
     replyBtn.addEventListener("click", () => {
+        // Reset background to pink on replay
+        document.body.className = 'pink-bg';
         tl.restart();
     });
 }
